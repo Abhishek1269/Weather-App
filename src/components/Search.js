@@ -6,7 +6,7 @@ export default function Search(props) {
     <div className='form-group'>
         <label htmlFor=''>Type City Name</label>
         <input type='text' className='form-control'
-        name='city' value={props.city} onChange={props.change} id='city' aria-describedby='helpId' placeholder=''></input>
+        name='city' value={props.city} onChange={props.handleCityChange} id='city' aria-describedby='helpId' placeholder=''></input>
     </div>
 </div>
     <div className='col-lg-1 text-center'>

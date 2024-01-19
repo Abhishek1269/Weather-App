@@ -1,4 +1,5 @@
 import React from 'react'
+import Loader from "./loader"
 
 export default function Result(props) {
     const { weatherData: data } = props;
@@ -12,7 +13,13 @@ export default function Result(props) {
     }
     let showOnPage;
     if (data == null || !data.weather || !data.weather[0]) {
-        showOnPage = <div>Loading ....</div>;
+        if(props.isSearched == true)
+        showOnPage = <Loader/>
+        else
+        showOnPage =( <div className='Container'>
+                        <h1 className='text-center mt-2'>Please Search a City</h1>
+                    </div>
+        );
     }else {
         showOnPage = (
             <div className='row'>
@@ -60,5 +67,9 @@ export default function Result(props) {
             </div>
         );
     }
-    return <>{showOnPage}</>;
+    return( <>
+        {/* <Loader/> */}
+        {showOnPage}{" "}
+        </>
+    );
 }

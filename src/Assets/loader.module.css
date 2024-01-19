@@ -1,0 +1,13 @@
+.customloader {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: repeating-conic-gradient(#282c34 0 90deg,#E4E4ED 0 180deg);
+    animation: s1 1s infinite linear;
+    margin-left: 30%;
+    margin-top: 12%;
+  }
+  
+  @keyframes s1 {
+    100% {transform: rotate(.5turn)}
+  }
